@@ -209,7 +209,7 @@ GameObject:
   - component: {fileID: 2500426239271085443}
   - component: {fileID: 2500426239271085440}
   m_Layer: 0
-  m_Name: Brick no Block
+  m_Name: FlatBrick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

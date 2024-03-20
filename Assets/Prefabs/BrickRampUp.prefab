@@ -110,7 +110,7 @@ GameObject:
   - component: {fileID: 5543754355266714179}
   - component: {fileID: 5543754355266714178}
   m_Layer: 0
-  m_Name: Brick no Block (4)
+  m_Name: BrickRampUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

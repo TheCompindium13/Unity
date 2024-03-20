@@ -5,11 +5,13 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField, Range(0,10000), Tooltip("Player max Speed")]
+    [SerializeField]
+    private bool _isPlayer1 = true;
+    [SerializeField, Range(0,1000), Tooltip("Player max Speed")]
     private float _maxSpeed;
-    [SerializeField, Range(0, 10000), Tooltip("Player acceleration")]
+    [SerializeField, Range(0, 1000), Tooltip("Player acceleration")]
     private float _acceleration;
-    [SerializeField, Range(0, 100000), Tooltip("Player Jump Height")]
+    [SerializeField, Range(0, 10000), Tooltip("Player Jump Height")]
     private float _jumpHeight;
     private Rigidbody _rigidbody;
     [SerializeField]
@@ -33,8 +35,16 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        _moveDirection = new Vector3(Input.GetAxisRaw("Horizontal"), 0,0);
-        _jumpInput = Input.GetAxisRaw("Jump") != 0;
+        if (_isPlayer1)
+        {
+            _moveDirection = new Vector3(Input.GetAxisRaw("Player1Horizontal"), 0, 0);
+            _jumpInput = Input.GetAxisRaw("Player1Jump") != 0;
+        }
+        else
+        {
+            _moveDirection = new Vector3(Input.GetAxisRaw("Player2Horizontial"), 0, 0);
+            _jumpInput = Input.GetAxisRaw("Player2Jump") != 0;
+        }
        
         
     }
@@ -45,7 +55,9 @@ public class PlayerController : MonoBehaviour
 
         Vector3 velocity = _rigidbody.velocity;
         float newXSpeed = Mathf.Clamp(_rigidbody.velocity.x, -_maxSpeed, _maxSpeed);
+        //float newZSpeed = Mathf.Clamp(_rigidbody.velocity.z, -_maxSpeed, _maxSpeed);
         velocity.x = newXSpeed;
+        //velocity.z = newZSpeed;
         _rigidbody.velocity = velocity;
 
         if (_jumpInput && _isGrounded)
