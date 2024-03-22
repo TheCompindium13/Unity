@@ -55,7 +55,6 @@ public class PlayerTagBehaviour : MonoBehaviour
         else
         {
             trail.enabled = false;
-            _taggedParticles = null;
         }
     }
     private void OnCollisionEnter(Collision collision)
@@ -63,8 +62,8 @@ public class PlayerTagBehaviour : MonoBehaviour
         // if we are not it do nothing
         if (!isTagged)
         {
-            _taggedParticles.Stop();
-            _taggedParticles.Clear();
+            //_taggedParticles.Stop();
+            //_taggedParticles.Clear();
             return;
         }
         // Attempt to get PlayerTagBehavior from what we hit

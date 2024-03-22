@@ -1164,30 +1164,38 @@ PrefabInstance:
     - target: {fileID: 1120505451455081305, guid: 219a6a98da6616945abf4f17119f70f4, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 1120505451455081307, guid: 219a6a98da6616945abf4f17119f70f4, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1120505451455081308, guid: 219a6a98da6616945abf4f17119f70f4, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1120505451455081311, guid: 219a6a98da6616945abf4f17119f70f4, type: 3}
       propertyPath: m_Name
       value: Player 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2529592287654049868, guid: 219a6a98da6616945abf4f17119f70f4, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4512243601969880163, guid: 219a6a98da6616945abf4f17119f70f4, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.85
+      value: 0.004
       objectReference: {fileID: 0}
     - target: {fileID: 4512243601969880163, guid: 219a6a98da6616945abf4f17119f70f4, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0
+      value: 0.005
       objectReference: {fileID: 0}
     - target: {fileID: 4512243601969880163, guid: 219a6a98da6616945abf4f17119f70f4, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.149
+      value: -0.014
+      objectReference: {fileID: 0}
+    - target: {fileID: 5964024649496019447, guid: 219a6a98da6616945abf4f17119f70f4, type: 3}
+      propertyPath: TrailModule.enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 219a6a98da6616945abf4f17119f70f4, type: 3}
@@ -1263,18 +1271,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2500979304046363007, guid: 37a81e4975b4bee4092d28875b69dbda, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2500979304046363007, guid: 37a81e4975b4bee4092d28875b69dbda, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 10306, guid: 0000000000000000f000000000000000, type: 0}
     - target: {fileID: 4521684539192165280, guid: 37a81e4975b4bee4092d28875b69dbda, type: 3}
       propertyPath: m_Constraints
       value: 120
       objectReference: {fileID: 0}
     - target: {fileID: 4521684539192165283, guid: 37a81e4975b4bee4092d28875b69dbda, type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4521684539192165285, guid: 37a81e4975b4bee4092d28875b69dbda, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 4521684539192165286, guid: 37a81e4975b4bee4092d28875b69dbda, type: 3}
       propertyPath: m_RootOrder
       value: 16
@@ -1325,7 +1341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4521684539192165291, guid: 37a81e4975b4bee4092d28875b69dbda, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4521684539254959509, guid: 37a81e4975b4bee4092d28875b69dbda, type: 3}
       propertyPath: m_LocalScale.x
@@ -1437,11 +1453,15 @@ PrefabInstance:
       objectReference: {fileID: 1686216630}
     - target: {fileID: 5828558874385959148, guid: 37a81e4975b4bee4092d28875b69dbda, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.44
+      value: 0.06
       objectReference: {fileID: 0}
     - target: {fileID: 5828558874385959148, guid: 37a81e4975b4bee4092d28875b69dbda, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.04
+      value: -0.049
+      objectReference: {fileID: 0}
+    - target: {fileID: 7939028202687845636, guid: 37a81e4975b4bee4092d28875b69dbda, type: 3}
+      propertyPath: TrailModule.enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 37a81e4975b4bee4092d28875b69dbda, type: 3}
