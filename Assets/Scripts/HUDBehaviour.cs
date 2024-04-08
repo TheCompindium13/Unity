@@ -18,6 +18,7 @@ public class HUDBehaviour : MonoBehaviour
     private float _maxTime;
     [SerializeField]
     private GameObject _currentUser;
+
     private void Update()
     {
         if (!_PlayerTagBehaviour.isTagged)
