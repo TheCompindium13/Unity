@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class PlayerTagBehaviour : MonoBehaviour
 {
     [SerializeField]
@@ -9,6 +9,9 @@ public class PlayerTagBehaviour : MonoBehaviour
 
     [SerializeField]
     private ParticleSystem _taggedParticles;
+
+    public UnityEvent OnTagged;
+
     private bool _canBeTagged = true;
     public bool isTagged { get => _isTagged; }
 
@@ -29,6 +32,7 @@ public class PlayerTagBehaviour : MonoBehaviour
             trail.enabled = true;
             _taggedParticles.Play();
         }
+        OnTagged.Invoke();
         return true;
     }
 
@@ -62,8 +66,6 @@ public class PlayerTagBehaviour : MonoBehaviour
         // if we are not it do nothing
         if (!isTagged)
         {
-            //_taggedParticles.Stop();
-            //_taggedParticles.Clear();
             return;
         }
         // Attempt to get PlayerTagBehavior from what we hit
@@ -87,7 +89,7 @@ public class PlayerTagBehaviour : MonoBehaviour
         TrailRenderer trailRenderer = GetComponent<TrailRenderer>();
         if (trailRenderer != null)
         {
-            trailRenderer.enabled = false;
+            trailRenderer.enabled = true;
         }
     }
     private void OnCollisionExit(Collision collision)

@@ -547,6 +547,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _isTagged: 0
   _taggedParticles: {fileID: 7939028202687845636}
+  OnTagged:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &5662153429871467592
 GameObject:
   m_ObjectHideFlags: 0
