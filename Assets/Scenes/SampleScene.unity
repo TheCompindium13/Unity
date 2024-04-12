@@ -217,6 +217,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 88072899}
+  - component: {fileID: 88072900}
+  - component: {fileID: 88072901}
   m_Layer: 0
   m_Name: Glass
   m_TagString: Untagged
@@ -239,6 +241,64 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 24
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!23 &88072900
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88072898}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 5c0d1e93b3a2ca0438c8f094c41dd77e, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &88072901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 88072898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 59743e0959c5f55418299639db5867a6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _gameObject: {fileID: 88072898}
+  _material: {fileID: 2100000, guid: 5c0d1e93b3a2ca0438c8f094c41dd77e, type: 2}
+  _hudBehaviourP1: {fileID: 1127807743}
+  _hudBehaviourP2: {fileID: 1399761579}
 --- !u!1 &120095533
 GameObject:
   m_ObjectHideFlags: 0
@@ -1245,6 +1305,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8148ba4d356a0c74b9139649f0648b44, type: 3}
+--- !u!114 &1127807743 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7069519550334796649, guid: 37a81e4975b4bee4092d28875b69dbda, type: 3}
+  m_PrefabInstance: {fileID: 4521684539552869932}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a3be06c944ce4c4fb1ce9b2c408b612, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1214208214
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1408,6 +1479,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8148ba4d356a0c74b9139649f0648b44, type: 3}
+--- !u!114 &1399761579 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3195571738347400213, guid: 219a6a98da6616945abf4f17119f70f4, type: 3}
+  m_PrefabInstance: {fileID: 1403141163}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a3be06c944ce4c4fb1ce9b2c408b612, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1403141163
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1527,6 +1609,14 @@ PrefabInstance:
       propertyPath: m_SphereColliders.Array.data[1].second
       value: 
       objectReference: {fileID: 438687755}
+    - target: {fileID: 3195571738347400213, guid: 219a6a98da6616945abf4f17119f70f4, type: 3}
+      propertyPath: _material
+      value: 
+      objectReference: {fileID: 2100000, guid: 5c0d1e93b3a2ca0438c8f094c41dd77e, type: 2}
+    - target: {fileID: 3195571738347400213, guid: 219a6a98da6616945abf4f17119f70f4, type: 3}
+      propertyPath: _gameObject
+      value: 
+      objectReference: {fileID: 88072898}
     - target: {fileID: 4883067054407304867, guid: 219a6a98da6616945abf4f17119f70f4, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2967,6 +3057,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7069519550334796649, guid: 37a81e4975b4bee4092d28875b69dbda, type: 3}
       propertyPath: _glass
+      value: 
+      objectReference: {fileID: 88072898}
+    - target: {fileID: 7069519550334796649, guid: 37a81e4975b4bee4092d28875b69dbda, type: 3}
+      propertyPath: _material
+      value: 
+      objectReference: {fileID: 2100000, guid: 5c0d1e93b3a2ca0438c8f094c41dd77e, type: 2}
+    - target: {fileID: 7069519550334796649, guid: 37a81e4975b4bee4092d28875b69dbda, type: 3}
+      propertyPath: _gameObject
       value: 
       objectReference: {fileID: 88072898}
     - target: {fileID: 7939028202687845636, guid: 37a81e4975b4bee4092d28875b69dbda, type: 3}
