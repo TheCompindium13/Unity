@@ -19,8 +19,18 @@ public class HUDBehaviour : MonoBehaviour
     [SerializeField]
     private GameObject _currentUser;
 
+    private void Start()
+    {
+
+
+    }
+    public float RemainingTime()
+    {
+        return _remainingTime;
+    }
     private void Update()
     {
+
         if (!_PlayerTagBehaviour.isTagged)
         {
             _remainingTime = _maxTime;
@@ -31,7 +41,6 @@ public class HUDBehaviour : MonoBehaviour
         {
             
             _remainingTime -= Time.deltaTime;
-
         }
         else
         {
@@ -40,7 +49,9 @@ public class HUDBehaviour : MonoBehaviour
         if (_remainingTime == 0)
         {
             _gameOver.text = _currentUser.name + " Has Won";
+
         }
+
         _Time.text = _remainingTime.ToString("f1");
     }
 }

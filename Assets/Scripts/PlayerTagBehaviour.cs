@@ -13,6 +13,8 @@ public class PlayerTagBehaviour : MonoBehaviour
     public UnityEvent OnTagged;
 
     private bool _canBeTagged = true;
+
+
     public bool isTagged { get => _isTagged; }
 
     public bool Tag()
