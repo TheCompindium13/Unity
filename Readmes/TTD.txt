@@ -1,0 +1,14 @@
+GameManager:
+This script is a MonoBehaviour which is a base class every script derives from. It’s used for anything related to the GameObject it’s attached to.
+
+    _instance (GameManager): This is a private static field that holds the singleton instance of the GameManager.
+
+    OnGoToNextScene (UnityEvent): This is a public UnityEvent that can be used to trigger actions when the game goes to the next scene. The [HideInInspector] attribute hides this field in the Unity inspector.
+
+    Instance (GameManager): This is a public static property that provides access to the singleton instance of the GameManager.
+
+    Awake(): This method is called when the script instance is being loaded. It’s used to ensure that there is only one instance of GameManager (singleton pattern). If an instance already exists, it destroys the new one. If not, it assigns the new one to _instance and makes sure it persists across scenes with DontDestroyOnLoad(gameObject).
+
+    GoToNextScene(): This public method is used to load the next scene in the build index. It uses SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1) to load the next scene.
+
+This script is typically used to manage game states and transitions between scenes. It follows the singleton pattern to ensure there’s only one GameManager instance throughout the game.
